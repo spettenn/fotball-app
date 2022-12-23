@@ -1,0 +1,35 @@
+.date_landing {
+    margin: auto;
+    font-size: 2rem;
+}
+.landing_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+    height: fit-content;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 1rem;
+    max-width: 675px;
+}
+tr {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+td {
+    margin-top: 0.4rem;
+}
+.landing_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
