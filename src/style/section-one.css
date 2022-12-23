@@ -1,3 +1,7 @@
+#section_one {
+    display: flex;
+    flex-direction: row;
+}
 .date_landing {
     margin: auto;
     font-size: 2rem;
@@ -15,6 +19,7 @@
     border-radius: 3px;
     padding: 1rem;
     max-width: 675px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
 }
 tr {
     display: flex;
@@ -27,9 +32,76 @@ tr {
 td {
     margin-top: 0.4rem;
 }
+.table_head_container {
+    display: flex;
+    width: 80%;
+}
 .landing_title {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 0;
     padding: 0;
+}
+.laLiga_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95%;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    list-style: none;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    padding-left: 0%;
+}
+
+.laLiga_dropdown_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    list-style: none;
+}
+.dropdown_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.4);
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: auto;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;  
+    border-radius: 2px;
+
+}
+.list_item_dropdown {
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+li:last-child {
+    border-bottom: none;
+}
+li:first-child {
+    padding-top: 0%;
+  }
+
+.dropdown_btn:hover {
+    background-color: darkblue;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
 }
