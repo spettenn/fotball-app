@@ -27,6 +27,7 @@ function sectionOne() {
 				</tr>
 				<PremierLeagueTable />
 			</div>
+
 			<div className='icon_container'>
 				<FontAwesomeIcon icon={faArrowDown} />
 			</div>
