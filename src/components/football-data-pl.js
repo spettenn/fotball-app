@@ -90,6 +90,7 @@ async function getPLTable() {
 				},
 			}
 		);
+		console.log(response.data.standings[0].table);
 		return response.data.standings[0].table;
 	} catch (error) {
 		console.error(error);
