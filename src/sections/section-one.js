@@ -38,13 +38,8 @@ function sectionOne() {
 			<div className='landing_container'>
 				<h1 className='landing_title'>Premier League Table</h1>
 				<LiveDate />
-				{/* <tr className='table_head_container'>
-					<th>Crest</th>
-					<th>Team</th>
-					<th>Points</th>
-				</tr> */}
+
 				<PremierLeagueTable />
-				{/* <PremierLeagueTable table={table} /> */}
 			</div>
 
 			{/* <div className='icon_container'>

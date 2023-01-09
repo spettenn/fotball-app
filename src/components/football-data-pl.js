@@ -40,40 +40,12 @@ function PremierLeagueTable() {
 		setSelectedTeam(team);
 	};
 
-	const imageUrl = (team) => {
+	/* 	const imageUrl = (team) => {
 		if (team.team.crestUrl === null) {
 			return 'https://i.ibb.co/7bQQYkX/blank.png';
 		} else {
 			return team.team.crestUrl;
 		}
-	};
-
-	const setBackgroundColor = (team) => {
-		const image = new Image();
-		image.src = imageUrl(team);
-
-		image.onload = () => {
-			// Retrieve RGB values of image using Canvas
-			const canvas = document.createElement('canvas');
-			const context = canvas.getContext('2d');
-			context.drawImage(image, 0, 0);
-			const imageData = context.getImageData(0, 0, image.width, image.height);
-			const data = imageData.data;
-
-			const container = document.querySelector('.dropdown_btn');
-			container.style.backgroundColor = `rgb(${data[0]}, ${data[1]}, ${data[2]})`;
-		};
-	};
-
-	/* 	const resetBackgroundColor = () => {
-		const container = document.querySelector('.dropdown_btn');
-		container.style.backgroundColor = 'rgb(255, 255, 255)';
-	}; */
-
-	/* const addEventListeners = (team) => {
-		const container = document.querySelector('.dropdown_btn');
-		container.addEventListener('mouseover', () => setBackgroundColor(team));
-		container.addEventListener('mouseout', resetBackgroundColor);
 	}; */
 
 	return (
@@ -84,17 +56,18 @@ function PremierLeagueTable() {
 						<button
 							className='dropdown_btn'
 							onClick={() => toggleDropdown(team)}>
-							<img
-								id='myImage'
-								height={40}
-								width={35}
-								src={team.team.crestUrl}
-								alt={`${team.team.name} logo`}
-							/>
 							<h3>{team.team.name}</h3> <h3>{team.points}</h3>
 						</button>
 						{dropdownOpen && selectedTeam === team && (
 							<ul className='laLiga_dropdown_container'>
+								<img
+									id='myImage'
+									height={40}
+									width={35}
+									src={team.team.crestUrl}
+									alt={`${team.team.name} logo`}
+									style={{ borderRadius: '50%', margin: 'auto' }}
+								/>
 								<li className='list_item_dropdown'>
 									Position: {team.position}
 								</li>
