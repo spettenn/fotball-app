@@ -2,35 +2,54 @@ import React from 'react';
 import styled from 'styled-components';
 import PremierLeagueTable from '../components/football-data-pl';
 import LiveDate from '../components/date';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+/* import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'; */
+/* import { useState, useEffect } from 'react';
+
+async function getPremierLeagueTable() {
+	// API call code goes here...
+} */
 
 const Landing = styled.div`
 	height: fit-content;
-	width: 100%;
+	width: 50%;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: flex;
 	flex-direction: row;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
 `;
 
 function sectionOne() {
+	/* 	const [table, setTable] = useState([]);
+
+	useEffect(() => {
+		async function fetchData() {
+			const premierLeagueTable = await getPremierLeagueTable();
+			setTable(premierLeagueTable);
+		}
+		fetchData();
+	}, []); */
+
 	return (
 		<Landing id='section_one'>
 			<div className='landing_container'>
 				<h1 className='landing_title'>Premier League Table</h1>
 				<LiveDate />
-				<tr className='table_head_container'>
+				{/* <tr className='table_head_container'>
 					<th>Crest</th>
 					<th>Team</th>
 					<th>Points</th>
-				</tr>
+				</tr> */}
 				<PremierLeagueTable />
+				{/* <PremierLeagueTable table={table} /> */}
 			</div>
 
-			<div className='icon_container'>
+			{/* <div className='icon_container'>
 				<FontAwesomeIcon icon={faArrowDown} />
-			</div>
+			</div> */}
 		</Landing>
 	);
 }

@@ -3,14 +3,42 @@
 @import "../src/style/section-three.css";
 
 .App {
-    --x: calc(var(--posX, 0) * 1px);
-    --y: calc(var(--posY, 0) * 1px);
-    background-image: 
-      linear-gradient(115deg, rgb(131, 143, 132), rgb(0 0 0)), 
-      radial-gradient( 90% 100% at calc( 50% + var(--x)) calc( 0% + var(--y)), rgb(200 200 200), rgb(59, 7, 116)), 
-      radial-gradient(100% 100% at calc( 80% - var(--x)) calc( 0% - var(--y)), rgb(219, 226, 20), rgb(036 000 000)), 
-      radial-gradient(150% 210% at calc(100% + var(--x)) calc( 0% + var(--y)), rgb(13, 85, 62), rgb(73, 166, 180)), 
-      radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(214, 74, 14), rgb(68, 99, 108)), 
-      linear-gradient(60deg, rgb(181, 161, 161), rgb(62, 55, 89));
-    background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+width: 100%;
+background-color: #2C3333;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+height: fit-content;
 }
+
+@media screen and (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+  .landing_container {
+    width: 100%;
+    min-width: 100%;
+    max-width: 80px;
+    padding: 0px;
+    border: none;
+  }
+  .laLiga_dropdown_container {
+    background-color: #395B64;
+    width: 90%;
+    min-width: 90%;
+    max-width: 80px;
+    padding: 0px;
+    padding-top: 10px;
+    margin: auto;
+    margin-top: -7px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  #section_one {
+    width: 100%;
+  }
+  h3 {
+    font-size: 0.8rem;
+  }
+}
+  

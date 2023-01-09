@@ -19,21 +19,8 @@
     border-radius: 3px;
     padding: 1rem;
     max-width: 675px;
-    /* From https://css.glass */
-background: rgba(255, 255, 255, 0.19);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.72);
-}
-tr {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    border-bottom: 1px solid #e0e0e0;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    min-width: 500px;
+
 }
 td {
     margin-top: 0.4rem;
@@ -69,7 +56,7 @@ td {
     flex-direction: column;
     justify-content: space-between;
     width: 90%;
-
+    
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     list-style: none;
@@ -83,7 +70,7 @@ td {
     font-size: 1rem;
     font-weight: 600;
     box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.4);
-    background-color: blue;
+    background-color: #395B64;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -96,6 +83,8 @@ td {
     border-radius: 2px;
     opacity: 100%;
     height: 4rem;
+    border-radius: 4px;
+    
 }
 .list_item_dropdown {
     font-size: 18px;
@@ -112,7 +101,17 @@ li:first-child {
   }
 
 .dropdown_btn:hover {
-    background-color: darkblue;
+    background-color: #395B64;
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
+}
+.show_more_btn {
+    width: 85%;
+    background-color: #395B64;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
 }
