@@ -40,14 +40,6 @@ function PremierLeagueTable() {
 		setSelectedTeam(team);
 	};
 
-	/* 	const imageUrl = (team) => {
-		if (team.team.crestUrl === null) {
-			return 'https://i.ibb.co/7bQQYkX/blank.png';
-		} else {
-			return team.team.crestUrl;
-		}
-	}; */
-
 	return (
 		<>
 			<ul className='laLiga_container'>
