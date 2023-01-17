@@ -1,50 +1,31 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_TOKEN = '6727fd07abmshdddcbc34023c21fp187140jsnab366a7a51bd';
-
-async function getVideo(video) {
-  try {
-    const response = await axios.get(
-      `https://free-football-soccer-videos.p.rapidapi.com/video/${video}`,
-      {
-        headers: {
-          /* 'X-RapidAPI-Host': 'free-football-soccer-videos.p.rapidapi.com', */
-          'X-RapidAPI-Key': API_TOKEN,
-        },
-      }
-    );
-
-    return response.data.url;
-  } catch (error) {
-    console.error(error);
+const options = {
+  method: 'GET',
+  url: 'https://free-football-soccer-videos1.p.rapidapi.com/v1/',
+  headers: {
+    'X-RapidAPI-Key': '6727fd07abmshdddcbc34023c21fp187140jsnab366a7a51bd',
+    'X-RapidAPI-Host': 'free-football-soccer-videos1.p.rapidapi.com'
   }
-}
+};
 
-function VideoEmbed({ video }) {
-  const [videoUrl, setVideoUrl] = useState('');
+const VideoEmbed = () => {
+  const [embed, setEmbed] = useState('');
 
   useEffect(() => {
-    async function fetchData() {
-      const url = await getVideo(video);
-      setVideoUrl(url);
-    }
-    fetchData();
-  }, [video]);
+    axios.request(options)
+      .then(response => {
+        setEmbed(response.data[0].embed);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
 
   return (
     <div>
-      {videoUrl && (
-        <iframe
-          title='video'
-          width="560"
-          height="315"
-          src={videoUrl}
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        />
-      )}
+      <div dangerouslySetInnerHTML={{ __html: embed }} />
     </div>
   );
 }
