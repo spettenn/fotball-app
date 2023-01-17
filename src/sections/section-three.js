@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import VideoEmbed from '../components/video.jsx';
+
 const SectionThreeContainer = styled.section`
 	height: 20rem;
 	width: fit-content;
@@ -11,7 +12,7 @@ const SectionThreeContainer = styled.section`
 function SectionThree() {
 	return (
 		<SectionThreeContainer>
-			<VideoEmbed />
+			<VideoEmbed video='laliga' />
 		</SectionThreeContainer>
 	);
 }
